@@ -15,9 +15,12 @@ action "Run deploy script" {
   secrets = [
     "PRIVATE_KEY",
     "PUBLIC_KEY",
-    "HOST",
-    "USER"
   ]
+  env = {
+    HOST = "**HOST**"
+    PORT = "**PORT**"
+    USER = "**USER**"
+  }
 }
 ```
 
@@ -36,8 +39,20 @@ You'll need to provide some secrets to use the action.
 
 * **PRIVATE_KEY**: Your SSH private key.
 * **PUBLIC_KEY**: Your SSH public key.
+
+### Required Environment Variables
+
+You'll also need to provide some env variables to use the action.
+
 * **HOST**: The host the action will SSH to to run the command. ie, `your.site.com`.
+* **PORT**: The SSH port.
 * **USER**: The user the SSH command will auth as with the public key.
+
+## Fork
+
+This action is based on:
+
+* https://github.com/maddox/actions/tree/master/ssh
 
 ## License
 
