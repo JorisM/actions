@@ -27,10 +27,10 @@ if [[ -z "$USER" ]]; then
 	exit 1
 fi
 
-if [[ "$GITHUB_REF" != "refs/heads/$BRANCH" ]]; then
-	echo "$GITHUB_REF is not refs/head/$BRANCH. Exiting."
-	exit 78
-fi
+# if [[ "$GITHUB_REF" != "refs/heads/$BRANCH" ]]; then
+# 	echo "$GITHUB_REF is not refs/head/$BRANCH. Exiting."
+# 	exit 78
+# fi
 
 SSH_PATH="$HOME/.ssh"
 
